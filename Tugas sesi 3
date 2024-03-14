@@ -1,0 +1,31 @@
+public class Account {
+    protected double balance;
+
+    public Account(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
+}
+
+public class SavingAccount extends Account {
+    private double interestRate;
+
+    public SavingAccount(double initialBalance, double interestRate) {
+        super(initialBalance);
+        this.interestRate = interestRate;
+    }
+
+    public double getInterestRate() {
+        return interestRate;
+    }
